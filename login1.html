@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jamia Polytechnic Akkalkuwa Library </title>
+        <link rel="website icon"
+            href="https://www.jamiapolytechnic.org/img/logo2.png">
+        <script
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && 
+                (e.keyCode === 67 || 
+                 e.keyCode === 86 || 
+                 e.keyCode === 85 || 
+                 e.keyCode === 117)) {
+                     alert('Content is protected\nYou cannot view the page source 😊');
+                return false;
+            } else {
+                return true;
+            }
+    };
+        $(document).keypress("u",function(e) {
+        if(e.ctrlKey)
+        {
+        return false;
+        }
+        else
+        {
+        return true;
+        }
+    });
+    </script>
+        <style>
+        body{
+            background-color: rgb(208, 244, 206);
+        }
+
+         .button{
+            
+            
+            display: inline-block;
+            outline: 0;
+            border:0;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            color: #85cb00;
+            background: #fff;
+            line-height: 30px;
+            border-radius: 40px;
+            padding: 20px;
+            font-size: 30px;
+            font-weight: 600;
+            box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+            transition: all 0.2s;
+            :hover{
+                box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+                transform: scale(1.01);
+            }
+            
+            
+         }
+
+        .button:hover {
+            background-color: #f31f9a;
+            transform: scale(1.05);
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            border-radius:10px;
+             
+        }
+        .njb,button{
+            width:100%;
+            height:100px;
+            background-color: bisque;
+            cursor: pointer;
+            text-decoration: solid;
+             
+        }
+    </style>
+    </head>
+    <body>
+        <center><h2 style="color:rgb(247, 9, 9)">Most Welcome Mr Sayyed Ilyas
+                Abbasi☘️</h2></center>
+        <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwspIJg-4xpvRxjyvDWlZEntfNocPGlqDQrHzT6tty7pWtmDVMv5xY69fC3R-Qza5AW8alxsowzBk7FNdgrzHLlRBNlEdjMierNqagGIujVrKbs0QZ-4RXii4bbZOj9dJGRgJPQv4Rlv1xVoIYKSSi_O9c6PDwJ5pdD9gUDaLa2g5-SjMm61sy8sKfF--0/s320/library%20sir.jpg"
+            height="100" style="border-radius:1000px; " width="100">
+
+        <center style="color:rgb(30, 17, 219)"><h2>JPA Library Database</h2></center>
+        <hr>
+        <div class="button-container">
+            <button class="button">Student Book Issue</button>
+            <button class="button">Student Book Return</button>
+        </div>
+
+        <div class="button-container">
+            <button class="button">Teacher Book Issue</button>
+            <button class="button">Teacher Book Return</button>
+        </div>
+        <br>
+        <div class="njb">
+            <a href="index.html"><button>Log Out</button></a>
+        </div>
+
+    </body>
+</html>

@@ -1,24 +1,291 @@
-
 <!DOCTYPE html>
- 
-<html lang="en" dir="ltr" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JPA Librarian Login☘️</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="website icon" href="https://www.jamiapolytechnic.org/img/logo2.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPA Librarian Login</title>
+    <link rel="website icon" href="https://www.jamiapolytechnic.org/img/logo2.png">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f7f7fe, #dff1ff);
+}
+
+section .colour {
+    position: absolute;
+    filter: blur(150px);
+}
+
+section .colour:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #0ba1a1;
+}
+
+section .colour:nth-child(2) {
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    background: #ffa500;
+}
+
+section .colour:nth-child(3) {
+    right: 100px;
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    background: #2b67f3;
+}
+
+.box {
+    position: relative;
+}
+
+.box .square {
+    position: absolute;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    animation-delay: calc(-1s * var(--i));
+    animation: animate 10s linear infinite;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(40px);
+    }
+}
+
+.box .square:nth-child(1) {
+    top: -50px;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.box .square:nth-child(2) {
+    z-index: 2;
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+}
+
+.box .square:nth-child(3) {
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    right: -50px;
+    bottom: -60px;
+}
+
+.box .square:nth-child(4) {
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    bottom: -80px;
+}
+
+.box .square:nth-child(5) {
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+
+.container {
+    width: 400px;
+    display: flex;
+    min-height: 400px;
+    position: relative;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    position: relative;
+}
+
+.form h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    left: 0;
+    width: 80px;
+    height: 4px;
+    content: "";
+    bottom: -10px;
+    background: #fff;
+    position: absolute;
+}
+
+.form .input__box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .input__box input {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form::placeholder {
+    color: #fff;
+}
+
+.form .input__box input[type="submit"] {
+    color: #666;
+    cursor: pointer;
+    background: #fff;
+    max-width: 100px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.forget {
+    color: #666;
+    margin-top: 5px;
+}
+
+.forget a {
+    color: #666;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="colour"></div>
+        <div class="colour"></div>
+        <div class="colour"></div>
+        <div class="box">
+            <div class="square" style="--i: 0"></div>
+            <div class="square" style="--i: 1"></div>
+            <div class="square" style="--i: 2"></div>
+            <div class="square" style="--i: 3"></div>
+            <div class="square" style="--i: 4"></div>
+            <div class="container">
+                <div class="form">
+                    <h2>JPA Librarian Login</h2>
+                    <form>
+                        <div class="input__box">
+                            <input type="text" id="i1" placeholder="username" required>
+                        </div>
+                        <div class="input__box">
+                            <input type="password" id="i2" placeholder="Password" required>
+                        </div>
+                        <div class="input__box">
+                            <center><input type="submit" value="Login" onclick="sub()" /></center>
+                        </div>
+                         
+                         
+                    </form>
+                </div>
+                
+    </section>
     <script>
+            function sub() {
+
+        var c;
+        var d;
+  
+  
+  
+        c = document.getElementById("i1").value;
+        d = document.getElementById("i2").value;
+  
+        if (c == "ilyas0366" && d == "jpa0366") 
+        {
+          
+          window.open("login1.html" ,"my window1");
+        }
+        else if(c=="azhar0366" && d=="jpa0366")
+        {
+          window.open("login2.html" ,"my window1");
+        }
+        
+        else {
+          alert("Dear Library Sir ☘️ Check Your Details");
+        }
+  
+  
+      }
+  
+      document.oncontextmenu = function () {
+        return false;
+      };
+  
+      document.onselectstart = function () {
+        return false;
+      }  
+    </script>
+
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
         document.onkeydown = function(e) {
             if (e.ctrlKey && 
                 (e.keyCode === 67 || 
                  e.keyCode === 86 || 
                  e.keyCode === 85 || 
                  e.keyCode === 117)) {
-                     alert('Content is protected\nYou cannot view the page source😊.');
+                     alert('Content is protected\nYou cannot view the page source 😊');
                 return false;
             } else {
                 return true;
@@ -35,201 +302,5 @@
         }
     });
     </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: #1abc9c;
-      overflow: hidden;
-    }
-
-    ::selection {
-      background: rgba(26, 188, 156, 0.3);
-    }
-
-    .container {
-      max-width: 440px;
-      padding: 0 20px;
-      margin: 170px auto;
-    }
-
-    .wrapper {
-      width: 100%;
-      background: #fff;
-      border-radius: 5px;
-      box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
-    }
-
-    .wrapper .title {
-      height: 90px;
-      background: #16a085;
-      border-radius: 5px 5px 0 0;
-      color: #fff;
-      font-size: 30px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .wrapper form {
-      padding: 30px 25px 25px 25px;
-    }
-
-    .wrapper form .row {
-      height: 45px;
-      margin-bottom: 15px;
-      position: relative;
-    }
-
-    .wrapper form .row input {
-      height: 100%;
-      width: 100%;
-      outline: none;
-      padding-left: 60px;
-      border-radius: 5px;
-      border: 1px solid lightgrey;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    form .row input:focus {
-      border-color: #16a085;
-      box-shadow: inset 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
-    }
-
-    form .row input::placeholder {
-      color: #999;
-    }
-
-    .wrapper form .row i {
-      position: absolute;
-      width: 47px;
-      height: 100%;
-      color: #fff;
-      font-size: 18px;
-      background: #16a085;
-      border: 1px solid #16a085;
-      border-radius: 5px 0 0 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .wrapper form .pass {
-      margin: -8px 0 20px 0;
-    }
-
-    .wrapper form .pass a {
-      color: #16a085;
-      font-size: 17px;
-      text-decoration: none;
-    }
-
-    .wrapper form .pass a:hover {
-      text-decoration: underline;
-    }
-
-    .wrapper form .button input {
-      color: #fff;
-      font-size: 20px;
-      font-weight: 500;
-      padding-left: 0px;
-      background: #16a085;
-      border: 1px solid #16a085;
-      cursor: pointer;
-    }
-
-    form .button input:hover {
-      background: #12876f;
-    }
-
-    .wrapper form .signup-link {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 17px;
-    }
-
-    .wrapper form .signup-link a {
-      color: #16a085;
-      text-decoration: none;
-    }
-
-    form .signup-link a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-
-<body>
-  <center>
-    <h3 style="color:red;">Only Login For JPA Libraryian ☘️</h3>
-  </center>
-  <hr>
-  <div class="container">
-    <div class="wrapper">
-      <div class="title"><span>Login JPA Librarian</span></div>
-      <form action="#">
-        <div class="row">
-          <i class="fas fa-user"></i>
-          <input type="text" id="i1" placeholder="username" required>
-        </div>
-        <div class="row">
-          <i class="fas fa-lock"></i>
-          <input type="password" id="i2" placeholder="Password" required>
-        </div>
-        <div class="pass"><a href="#">Forgot password?</a></div>
-        <div class="row button">
-          <input type="submit" value="Login" onclick="sub()">
-        </div>
-
-      </form>
-    </div>
-  </div>
-  <script>
-    function sub() {
-
-      var c;
-      var d;
-
-
-
-      c = document.getElementById("i1").value;
-      d = document.getElementById("i2").value;
-
-      if (c == "ilyas0366" && d == "jpa0366") 
-      {
-        
-        window.open("login1.html" ,"my window1");
-      }
-      else if(c=="azhar0366" && d=="jpa0366")
-      {
-        window.open("login2.html" ,"my window1");
-      }
-      
-      else {
-        alert("Dear Library Sir ☘️ Check Your Details");
-      }
-
-
-    }
-
-    document.oncontextmenu = function () {
-      return false;
-    };
-
-    document.onselectstart = function () {
-      return false;
-    }  
-  </script>
 </body>
-
 </html>
- 

@@ -6,30 +6,29 @@
     <title>JPA TEACHER BOOK FORM</title>
     <link rel="website icon" href="https://www.jamiapolytechnic.org/img/logo2.png">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        document.onkeydown = function(e) {
-            if (e.ctrlKey && 
-                (e.keyCode === 67 || 
-                 e.keyCode === 86 || 
-                 e.keyCode === 85 || 
-                 e.keyCode === 117)) {
-                     alert('Content is protected\nYou cannot view the page source 😊.');
-                return false;
-            } else {
-                return true;
-            }
-    };
-        $(document).keypress("u",function(e) {
-        if(e.ctrlKey)
-        {
-        return false;
+<script>
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
         }
-        else
-        {
-        return true;
-        }
-    });
-    </script>
+};
+$(document).keypress("u",function(e) {
+  if(e.ctrlKey)
+  {
+return false;
+}
+else
+{
+return true;
+}
+});
+</script>
     <style>
          
             body{

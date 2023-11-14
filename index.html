@@ -266,6 +266,25 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   border: 2px solid #4488a7;
   }
+  .text-glow {
+    
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+      
+    
+     }
+     
+     @keyframes glow {
+       from{
+       text-shadow: 0 0 10px rgb(30, 193, 15), 0 0 20px #0fa, 0 0 30px #0fa, 0 0 40px #0fa,0 0 50px #0fa;
+     }
+     to {
+       text-shadow: 0 0 60px #0fa, 0 0 70px #0fa;
+     }
+     
+     }
     
   </style>
 </head>
@@ -303,7 +322,8 @@ body::-webkit-scrollbar-thumb {
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>WELCOME TO JAMIA POLYTECHNIC LIBRARY</h1>
+          <div class="text-glow">
+          <h1>WELCOME TO JAMIA POLYTECHNIC LIBRARY</h1></div>
           <h2>Dist.Nadurbar(M.S) A Muslim Minority Institute Library, Approved by AICTE,Delhi
             & DTE, Govt. of Maharashtra, Affilated to MSBTE, Mumbai.</h2><br>
 
@@ -338,7 +358,7 @@ body::-webkit-scrollbar-thumb {
         <div class="row">
           <img
             src="https://blogger.googleusercontent.com/img/a/AVvXsEgOotxn0rkpLhSokhfXxPYTe5dDCb6gl2J7UCqjelj4kEAjQagK16KTBrUAvRGgv1dQf5W2ah9n52tWkz5Npsa3EEJAOIJ-vQOUGu6bUj590knhJL75FsHHsz9Ic0_aR_gmrj0kIYVGo7UDupo1GJh07uFZ7vc3-C21DshpGC8H7RM0-NwDAwKEfrxieoNv"
-            width="100%" height="auto"></a>
+            width="100%" height="300"></a>
         </div>
 
         <div
@@ -406,43 +426,43 @@ body::-webkit-scrollbar-thumb {
         <div class="row counters position-relative">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="3012" data-purecounter-duration="0"
+            <span data-purecounter-start="0" data-purecounter-end="3012" data-purecounter-duration="10"
               class="purecounter"></span>
             <p>Computer Engg.</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="4186" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="4186" data-purecounter-duration="10"
               class="purecounter"></span>
             <p>Mechanical Engg.</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="	1135" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="	1135" data-purecounter-duration="10"
               class="purecounter"></span>
             <p>Civil Engg.</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="5594" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="5594" data-purecounter-duration="10"
               class="purecounter"></span>
             <p>Electrical Engg.</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="2363" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="2363" data-purecounter-duration="10"
               class="purecounter"></span>
             <p>Applied Science.</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="16290" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="16290" data-purecounter-duration="10"
               class="purecounter"></span>
             <p>Total Books In Library.</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="2584" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="2584" data-purecounter-duration="10"
               class="purecounter"></span>
             <p>Number Tittle In Library.</p>
           </div>
@@ -907,11 +927,26 @@ body::-webkit-scrollbar-thumb {
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
+      
+
   <!-- Vendor JS Files -->
   <script> 
     document.oncontextmenu = function () { return false; }; 
-    document.onselectstart = function () { return false; } 
+  
+
+
+  
+  /** TO DISABLE PRINTS WHIT CTRL+P **/
+  document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.key == 'p') {
+          alert('This section is not allowed to print or export to PDF');
+          e.cancelBubble = true;
+          e.preventDefault();
+          e.stopImmediatePropagation();
+      }
+  });
   </script>
+  
   
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
